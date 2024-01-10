@@ -53,7 +53,7 @@
      <rect>
       <x>10</x>
       <y>640</y>
-      <width>375</width>
+      <width>250</width>
       <height>30</height>
      </rect>
     </property>
@@ -64,9 +64,9 @@
    <widget class="QPushButton" name="edit_button">
     <property name="geometry">
      <rect>
-      <x>395</x>
+      <x>530</x>
       <y>640</y>
-      <width>375</width>
+      <width>250</width>
       <height>30</height>
      </rect>
     </property>
@@ -124,6 +124,19 @@
     </property>
     <property name="text">
      <string>Эксцельса</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delete_button">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>640</y>
+      <width>250</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Удалить Запись</string>
     </property>
    </widget>
   </widget>
