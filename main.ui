@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>900</width>
+    <width>1280</width>
     <height>700</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>900</width>
+    <width>1280</width>
     <height>700</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>900</width>
+    <width>1280</width>
     <height>700</height>
    </size>
   </property>
@@ -38,12 +38,12 @@
    <string>Coffee</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTableView" name="table">
+   <widget class="QTableWidget" name="table">
     <property name="geometry">
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>880</width>
+      <width>1260</width>
       <height>620</height>
      </rect>
     </property>
@@ -53,7 +53,7 @@
      <rect>
       <x>10</x>
       <y>640</y>
-      <width>200</width>
+      <width>375</width>
       <height>30</height>
      </rect>
     </property>
@@ -64,9 +64,9 @@
    <widget class="QPushButton" name="edit_button">
     <property name="geometry">
      <rect>
-      <x>220</x>
+      <x>395</x>
       <y>640</y>
-      <width>200</width>
+      <width>375</width>
       <height>30</height>
      </rect>
     </property>
@@ -77,7 +77,7 @@
    <widget class="QRadioButton" name="arabic_button">
     <property name="geometry">
      <rect>
-      <x>430</x>
+      <x>790</x>
       <y>640</y>
       <width>100</width>
       <height>30</height>
@@ -90,7 +90,7 @@
    <widget class="QRadioButton" name="robust_button">
     <property name="geometry">
      <rect>
-      <x>540</x>
+      <x>910</x>
       <y>640</y>
       <width>100</width>
       <height>30</height>
@@ -103,7 +103,7 @@
    <widget class="QRadioButton" name="liberica_button">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>1020</x>
       <y>640</y>
       <width>120</width>
       <height>30</height>
@@ -116,7 +116,7 @@
    <widget class="QRadioButton" name="excelsa_button">
     <property name="geometry">
      <rect>
-      <x>770</x>
+      <x>1150</x>
       <y>640</y>
       <width>120</width>
       <height>30</height>
