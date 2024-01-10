@@ -1,6 +1,6 @@
 import sqlite3
 
-with sqlite3.connect("Coffee.sqlite") as data_base:
+with sqlite3.connect("coffee.sqlite") as data_base:
     cursor = data_base.cursor()
 
     dict_grade = {"Арабика": ("Вкусный", 350), "Робуста": ("Очень вкусный", 450),
