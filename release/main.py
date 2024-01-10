@@ -57,7 +57,7 @@ class AdditionallyWin(QWidget, Ui_additional_window):
         if self.grind_flag != "" and self.degree_flag != "" and self.degree_flag != "":
             if self.title == "Добавить":
                 try:
-                    with sqlite3.connect("data/coffee.sqlite") as data_base:
+                    with sqlite3.connect("../data/coffee.sqlite") as data_base:
                         data_base.cursor().execute("""INSERT INTO Coffee VALUES
                         (?, ?, ?, ?, ?, ?, ?)""", (int(self.id_edit.text()), self.grade_flag, self.degree_flag,
                                                    1 if self.grind_flag == "Молотый" else 0, self.taste_edit.text(),
@@ -71,7 +71,7 @@ class AdditionallyWin(QWidget, Ui_additional_window):
             elif self.title == "Удалить":
                 flag = False
                 try:
-                    with sqlite3.connect("data/coffee.sqlite") as data_base:
+                    with sqlite3.connect("../data/coffee.sqlite") as data_base:
                         info = data_base.cursor().execute("""SELECT * FROM Coffee
                         WHERE ID = ?""", (int(self.id_edit.text()),)).fetchall()[0]
 
@@ -93,7 +93,7 @@ class AdditionallyWin(QWidget, Ui_additional_window):
                     self.exit_button.setText("Непредвиденная ошибка!")
             else:
                 try:
-                    with sqlite3.connect("data/coffee.sqlite") as data_base:
+                    with sqlite3.connect("../data/coffee.sqlite") as data_base:
                         data_base.cursor().execute("""UPDATE Coffee set
                         Grade = ?,
                         DegreeRoasting = ?,
@@ -148,7 +148,7 @@ class Coffee(QMainWindow, Ui_Coffee):
         self.base_table()
 
     def __radio_button__(self):
-        with sqlite3.connect("data/coffee.sqlite") as data_base:
+        with sqlite3.connect("../data/coffee.sqlite") as data_base:
             list_info = data_base.cursor().execute("""SELECT * FROM Coffee
             WHERE Grade = ?""", (self.sender().text(),)).fetchall()
 
@@ -179,7 +179,7 @@ class Coffee(QMainWindow, Ui_Coffee):
             self.child.show()
 
     def base_table(self):
-        with sqlite3.connect("data/coffee.sqlite") as data_base:
+        with sqlite3.connect("../data/coffee.sqlite") as data_base:
             list_info = data_base.cursor().execute("SELECT * FROM Coffee").fetchall()
 
         self.table.setRowCount(len(list_info))
